@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasta player</title>
+    <link rel="stylesheet" href="sasta-css.css">
+    <script src="sasta-ui.js" defer></script>
+    <script src="sasta-app.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                <h1>Sasta Spotify</h1>
+            </div>
+            <div class="playlist-box">
+                <button id="playlistBtn">
+                   <img src="src/img/playlist.svg" alt=""> Playlist
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="app-container">
+            <div class="now-playing">
+                <h2>Now Playing</h2>
+            </div>
+            <div class="track-image">
+                <img src="src/img/logo.png" alt="">
+            </div>
+            <div class="controls">
+                <div class="track-info">
+                    <h2 class="track-title">
+                        <marquee scrollamount="4"> Alan Walker - Ignite </marquee>
+                    </h2>
+                    <h3 class="artist">Alan Walker</h3>
+                </div>
+                <div class="progress-bar">
+                    <input type="range" id="bar" value="100" min="0" max="240">
+                    <div class="progress-info">
+                        <span class="current-progress">1:40</span>
+                        <span class="total-duration">4:00</span>
+                    </div>
+                    <div class="audio-controls">
+                        <div class="btn-wrapper">
+                            <span class="control-btn">
+                                <img src="src/img/previous-btn.svg" class="svg-btn">
+                            </span>
+                            <span class="control-btn play-btn">
+                                <img src="src/img/play-btn.svg" class="svg-btn">
+                            </span>
+                            <span class="control-btn">
+                                <img src="src/img/next-btn.svg" class="svg-btn">
+                            </span>
+                        </div>
+                        <!-- <select id="speed">
+                            <option value="0.25">0.25</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.75">0.75</option>
+                            <option class="active" value="1">Normal</option>
+                            <option value="1.25">1.25</option>
+                            <option value="1.50">1.5</option>
+                            <option value="1.75">1.75</option>
+                            <option value="2">2</option>
+                        </select> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Content Protected with Copyright: <a href="https://github.com/tcabrij/" target="_blank">More Info</a>
+    </footer>
+</body>
+</html>
