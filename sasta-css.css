@@ -110,12 +110,6 @@ main{
     border-radius: 10px;
 }
 
-
- /* Player controls  */
-.controls{
-    /* border: 1px solid; */
-}
-
 .track-info{
     text-align: center;
     margin: 5px 0px;
@@ -187,6 +181,19 @@ main{
     padding-left: 3px;
 }
 
+
+
+
+
+
+/* invisible Audio Player */
+.hidden-player{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    visibility: hidden;
+}
 
 /* footer  */
 footer{
