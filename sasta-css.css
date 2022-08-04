@@ -179,11 +179,9 @@ main{
     filter: invert();
 }
 
-.play-btn{
+.padding-3{
     padding-left: 3px;
 }
-
-
 
  /*
   ============= Playlist modal window ==============  
