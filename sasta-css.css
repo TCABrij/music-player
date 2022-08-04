@@ -284,6 +284,7 @@ main{
     margin-bottom: 10px;
     font-family: 'Poppins';
     transform: scale(.95);
+    user-select: none;
 }
 .track .title, .artist{
     padding-left: 5px;
