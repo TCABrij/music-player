@@ -1,3 +1,8 @@
+/* File is responsible for UI
+    - Player UI 
+    - Buttons UI etc 
+*/
+
 const playBtn = document.querySelector('.play-btn')
 const playlistBtn = document.querySelector('#playlistBtn')
 

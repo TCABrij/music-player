@@ -1,3 +1,8 @@
+/* File consists app functionalities
+    - Playling media 
+    - Searching tracks 
+*/
+
 const audio = document.querySelector('audio')
 const audioSrc = document.querySelector('source')
 const nextBtn = document.querySelector('.next-btn')
