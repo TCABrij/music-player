@@ -90,6 +90,7 @@ main{
     border-radius: 10px;
     height: 400px;
     background-color: var(--app-background);
+    position: relative;
 }
 
 .now-playing{
@@ -108,7 +109,8 @@ main{
 }
 
 .track-image img{
-    width: 200px;
+    width: auto;
+    max-width: 200px;
     border-radius: 10px;
 }
 
@@ -355,4 +357,37 @@ footer img{
 footer span{
     display: flex;
     align-items: center;
+}
+
+@media only screen and (max-width: 427px) {
+    .track-image img{
+        width: 150px;
+    }
+    .title h1{
+        font-size: 2rem;
+    }
+    .btn-wrapper{
+        width: 80%;
+    }
+    .app-container{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 355px) {
+    .search-field{
+        font-size: .7rem;
+        background-size: 20px;
+    }
+    .track .title{
+        font-size: medium;
+    }
+    
+}
+@media only screen and (max-width: 313px) {
+    .track-image img{
+        width: 100px;
+    }
+    .app-container{
+        height: 300px;
+    }
 }
