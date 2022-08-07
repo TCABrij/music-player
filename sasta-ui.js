@@ -14,8 +14,10 @@ playBtn.addEventListener('click', ()=>{
 
 })
 
-playlistBtn.addEventListener('click', ()=>{
-    
+playlistBtn.addEventListener('click', openPlaylist)
+
+function openPlaylist(){
+
     const modal = document.createElement('div')
     modal.setAttribute('class', 'modal-window')
     modal.innerHTML = 
@@ -25,7 +27,7 @@ playlistBtn.addEventListener('click', ()=>{
     </section>
     <section class="music-list-section">
         <div class="track">
-            <h3 class="title">Alan walker - Sing me to sleep</h3>
+            <h3 class="title">Alan walker - Ignite</h3>
             <p class="artist">Artist: Alan Walker</p>
         </div>
         <div class="track">
@@ -33,21 +35,30 @@ playlistBtn.addEventListener('click', ()=>{
             <p class="artist">Artist: Alan Walker</p>
         </div>
         <div class="track">
-            <h3 class="title">Alan walker - Sing me to sleep</h3>
+            <h3 class="title">Alan walker - Play</h3>
             <p class="artist">Artist: Alan Walker</p>
         </div>
     </section>
 </div>`
 
     document.body.appendChild(modal)
-    
-    document.querySelector('.modal-window').addEventListener('click', e=>{
 
-        if(e.target.classList.contains('modal-window')){
+    // modal closing
+    document.querySelector('.modal-window').addEventListener('click', closeModal)
+
+    // close modal on clicking track 
+    const musicTracks = document.querySelectorAll('.music-list-selection .track')
+    musicTracks.forEach( track =>{
+        track.addEventListener('click', closeModal)
+    })
+
+    function closeModal(e){
+        if(e.target.classList.contains('modal-window') || e.target.classList.contains('track')){
             modal.firstChild.classList.replace('modal-pop', 'modal-closed')
             modal.firstChild.addEventListener('animationend', ()=>{
                 modal.remove()
             })
         }
-    })
-})
+    }
+
+}

@@ -290,6 +290,7 @@ main{
 }
 .track .title, .artist{
     padding-left: 5px;
+    pointer-events: none;
 }
 .track .title{
     font-weight: 400;
@@ -297,7 +298,7 @@ main{
 }
 .track .artist{
     font-size: 15px;
-    color:rgb(48, 48, 48)
+    color:rgb(48, 48, 48);
 }
 
 .track:hover{
