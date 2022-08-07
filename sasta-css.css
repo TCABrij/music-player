@@ -360,6 +360,7 @@ footer span{
 }
 
 @media only screen and (max-width: 427px) {
+
     .track-image img{
         width: 150px;
     }
@@ -371,6 +372,7 @@ footer span{
     }
     .app-container{
         height: 350px;
+        width: 60vw;
     }
 }
 @media only screen and (max-width: 355px) {
