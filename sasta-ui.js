@@ -5,10 +5,14 @@ playBtn.addEventListener('click', ()=>{
     const svgImg = document.querySelector('.play-btn img')
     if(playBtn.classList.contains('paused')){
         svgImg.src = 'src/img/pause-btn.svg'
+        // pause button UI
+        svgImg.classList.remove('padding-3')
+        svgImg.parentElement.classList.remove('padding-3')
         playBtn.classList.replace('paused', 'playing')
     }
     else{
         svgImg.src = 'src/img/play-btn.svg'
+        svgImg.parentElement.classList.add('padding-3')
         playBtn.classList.replace('playing', 'paused')
     }
 
