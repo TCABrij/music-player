@@ -8,6 +8,7 @@
     <title>Sasta player</title>
     <link rel="stylesheet" href="sasta-css.css">
     <script src="sasta-ui.js" defer></script>
+    <script src="src/audio/tracks-info.js" defer></script>
     <script src="sasta-app.js" defer></script>
 </head>
 
@@ -30,20 +31,20 @@
                 <h2>Now Playing</h2>
             </div>
             <div class="track-image">
-                <img src="src/img/logo.webp" alt="">
+                <img src="" class="art" alt="Artist logo">
             </div>
             <div class="controls">
                 <div class="track-info">
                     <h2 class="track-title">
-                        <marquee scrollamount="4"> Alan Walker - Ignite </marquee>
+                        <marquee scrollamount="4">Track Title</marquee>
                     </h2>
-                    <h3 class="artist">Alan Walker</h3>
+                    <h3 class="artist">Artist name</h3>
                 </div>
                 <div class="progress-bar">
                     <input type="range" id="bar" value="100" min="0" max="240">
                     <div class="progress-info">
-                        <span class="current-progress">1:40</span>
-                        <span class="total-duration">4:00</span>
+                        <span class="current-progress">0</span>
+                        <span class="total-duration">0</span>
                     </div>
                     <div class="audio-controls">
                         <div class="btn-wrapper">
@@ -73,7 +74,7 @@
     </main>
     <div class="hidden-player">
         <audio controls loop data-paused="true">
-            <source src="src/audio/Despacito - Indian Classical Version (feat. Praveen Prathapan & Janan Sathiendran) .mp3">
+            <source src="src/audio/2.m4a">
         </audio>
     </div>
     <!-- <div class="modal-window">
