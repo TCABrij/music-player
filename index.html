@@ -48,14 +48,20 @@
                     </div>
                     <div class="audio-controls">
                         <div class="btn-wrapper">
-                            <span class="control-btn previous-btn">
+                            <span class="control-btn previous-btn" title="Previous">
                                 <img src="src/img/previous-btn.svg" class="svg-btn">
                             </span>
-                            <span class="control-btn play-btn paused" >
+                            <span class="control-btn play-btn paused" title="Play/Pause">
                                 <img src="src/img/play-btn.svg" class="svg-btn padding-3">
                             </span>
                             <span class="control-btn next-btn">
-                                <img src="src/img/next-btn.svg" class="svg-btn">
+                                <img src="src/img/next-btn.svg" class="svg-btn" title="Next">
+                            </span>
+                            <span class="control-btn volume-btn" title="Volume" data-muted="false">
+                                <img src="src/img/volume-full-btn.svg" class="svg-btn">
+                                <div class="volume-bar-box volume-hidden">
+                                    <input type="range" style="width: 50px;" value="1" id="#volumeBar" min="0" max="1" step=".1">
+                                </div>
                             </span>
                         </div>
                         <!-- <select id="speed">

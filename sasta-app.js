@@ -74,9 +74,10 @@ function playMusic(){
 }
 
 function playNext(){
-    audioSrc.src = '/src/audio/3.m4a'
+    audioSrc.src = 'src/audio/2.m4a'
     audio.load()
     audio.play()
+    player.updateDOM
 }
 
 

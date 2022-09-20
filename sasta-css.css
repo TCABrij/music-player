@@ -185,6 +185,125 @@ main{
     padding-left: 3px;
 }
 
+   /* Volume controller and Button  */
+.volume-btn{
+    height: 30px;
+    width: 30px;
+    margin-top: 3px;
+    margin-left: 5px;
+    outline: none;
+    background-color: rgb(42, 38, 38);
+    box-shadow: none;
+    padding: 5px;
+    position: relative;
+    isolation: isolate;
+}
+.volume-btn .svg-btn{
+    width: 20px;
+    margin: 5px;
+}
+.volume-bar-box{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    border-radius: 100vmax;
+    display: block;
+    width: 40px;
+    transition: transform .3s, opacity .3s;
+    opacity: 0;
+}
+.volume-btn:hover .volume-bar-box{
+    transform: translateX(28px);
+    opacity: 1;
+}
+ /* Range styling  */
+#volumeBar{
+    height: 25px;
+    width: 400px;
+    -webkit-appearance: none;
+}
+#volumeBar:focus{
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 50px;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000;
+  background: var(--green);
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid var(--green);
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: var(--green);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--green);
+}
+input[type=range]::-moz-range-track {
+  width: 50px;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000;
+  background: var(--green);
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid var(--green);
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: var(--green);
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 50px;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: var(--green);
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: var(--green);
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid var(--green);
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: var(--green);
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: var(--green);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: var(--green);
+}
+
+
  /*
   ============= Playlist modal window ==============  
 */

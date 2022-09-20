@@ -6,6 +6,37 @@
 const playBtn = document.querySelector('.play-btn')
 const playlistBtn = document.querySelector('#playlistBtn')
 const bar = document.querySelector('#bar')
+const volumeBtn = document.querySelector('.volume-btn')
+const volumeSVG = volumeBtn.firstElementChild
+const volumeBar = document.querySelector('.volume-bar-box')
+const slider = volumeBar.firstElementChild
+
+// Listening If user clicks on Volume button
+volumeBtn.addEventListener('click', (e)=>{
+    if(e.target.classList.contains('volume-btn') || e.target.classList.contains('svg-btn')){
+        if(volumeBtn.dataset.muted == 'false'){
+            volumeSVG.src = 'src/img/volume-muted-btn.svg'
+            volumeBtn.dataset.muted = 'true'
+            audio.volume = 0
+        }
+        else{
+            volumeSVG.src = 'src/img/volume-full-btn.svg'
+            volumeBtn.dataset.muted = 'false'
+            audio.volume = '1'
+            slider.value = 1
+        }
+    }
+})
+
+// Change Volume according to Range value
+slider.addEventListener('change', ()=>{
+    audio.volume = slider.value
+    if(audio.volume < .1)
+        volumeSVG.src = 'src/img/volume-muted-btn.svg'
+    else
+        volumeSVG.src = 'src/img/volume-full-btn.svg'
+})
+
 
 // Listening to the Progress bar if user changes
 bar.addEventListener('change', ()=>{
