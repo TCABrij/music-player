@@ -5,6 +5,12 @@
 
 const playBtn = document.querySelector('.play-btn')
 const playlistBtn = document.querySelector('#playlistBtn')
+const bar = document.querySelector('#bar')
+
+// Listening to the Progress bar if user changes
+bar.addEventListener('change', ()=>{
+    player.updateBar()
+})
 
 playBtn.addEventListener('click', ()=>{
     const svgImg = document.querySelector('.play-btn img')
@@ -14,6 +20,38 @@ playBtn.addEventListener('click', ()=>{
         svgImg.classList.remove('padding-3')
         svgImg.parentElement.classList.remove('padding-3')
         playBtn.classList.replace('paused', 'playing')
+
+        // player duration and current time
+        setInterval( ()=>{
+
+            document.querySelector('.current-progress').textContent = getCurrentDuration()
+            document.querySelector('.total-duration').textContent = getTotalDuration()
+
+            function getCurrentDuration(){
+                let currentDuration = audio.currentTime
+                let min = 0
+                let seconds = Math.floor(currentDuration)
+                if(currentDuration >= 60){
+                    min = Math.floor(currentDuration/60)
+                    seconds = Math.floor(currentDuration - min*60)
+                }
+
+                let bar = document.querySelector('#bar')
+                bar.max = audio.duration
+                bar.value = audio.currentTime
+
+                return `0${min}:${seconds}`
+            }
+
+            function getTotalDuration(){
+                let duration = audio.duration
+                let min = Math.floor(duration/60) | 00
+                let seconds = Math.floor(duration - min*60) | 00
+
+                return `0${min}:${seconds}`
+            }
+
+        },10)
     }
     else{
         svgImg.src = 'src/img/play-btn.svg'

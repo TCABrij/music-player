@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sasta player</title>
+    <title>Spotify Lite</title>
     <link rel="stylesheet" href="sasta-css.css">
-    <script src="sasta-ui.js" defer></script>
     <script src="src/audio/tracks-info.js" defer></script>
+    <script src="sasta-ui.js" defer></script>
     <script src="sasta-app.js" defer></script>
 </head>
 
@@ -16,7 +16,7 @@
     <header>
         <nav>
             <div class="title">
-                <h1>Sasta Spotify</h1>
+                <h1>Spotify</h1>
             </div>
             <div class="playlist-box">
                 <button id="playlistBtn">
@@ -43,8 +43,8 @@
                 <div class="progress-bar">
                     <input type="range" id="bar" value="100" min="0" max="240">
                     <div class="progress-info">
-                        <span class="current-progress">0</span>
-                        <span class="total-duration">0</span>
+                        <span class="current-progress">00:00</span>
+                        <span class="total-duration">00:00</span>
                     </div>
                     <div class="audio-controls">
                         <div class="btn-wrapper">
@@ -74,7 +74,7 @@
     </main>
     <div class="hidden-player">
         <audio controls loop data-paused="true">
-            <source src="src/audio/2.m4a">
+            <source src="">
         </audio>
     </div>
     <!-- <div class="modal-window">

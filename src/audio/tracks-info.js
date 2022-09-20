@@ -4,7 +4,7 @@ const tracks = [
         name: 'Alan Walker - Alone',
         artist: 'Alan Walker',
         thumbnail: 'src/img/track-thumbs/alanwalker.webp',
-        src: '/src/audio/1.m4a'
+        src: 'src/audio/1.m4a'
     },
     {
         id: 2,
