@@ -155,11 +155,33 @@ main{
     justify-content: center;
 }
 
+  /* playback speed  */
+.speed-controller{
+    position: relative;
+    width: auto;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+ 
+#speed{
+    height: 80%;
+    width: 55px;
+    border: 2px solid white;
+    outline: 1px solid var(--green);
+    border-radius: 100vmax;
+    color: white;
+    background-color: rgb(124, 183, 35);
+    box-shadow: 0px 0px 2px rgb(124, 183, 35);
+    
+ } 
+
 .btn-wrapper{
-    /* border: 1px solid black; */
     display: flex;
     justify-content: space-around;
-    width: 60%;
+    width: 100%;
 }
 
 /* control buttons and svgs */
@@ -197,6 +219,7 @@ main{
     padding: 5px;
     position: relative;
     isolation: isolate;
+    float: right;
 }
 .volume-btn .svg-btn{
     width: 20px;

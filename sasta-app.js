@@ -7,6 +7,8 @@ const audio = document.querySelector('audio')
 const audioSrc = document.querySelector('source')
 const nextBtn = document.querySelector('.next-btn')
 const previousBtn = document.querySelector('.previous-btn')
+const speed = document.querySelector('select')
+
 
 // Load Track to Player Object
 document.addEventListener('DOMContentLoaded', loadTracks)
@@ -38,6 +40,7 @@ const player = {
 
 playBtn.addEventListener('click', playMusic)
 nextBtn.addEventListener('click', playNext)
+speed.addEventListener('change', updateSpeed)
 
 
 function loadTracks(){
@@ -71,6 +74,10 @@ function playMusic(){
         audio.pause()
         audio.dataset.paused = 'true'   
     }
+}
+
+function updateSpeed(){
+    audio.playbackRate = speed.value
 }
 
 function playNext(){
