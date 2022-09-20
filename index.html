@@ -47,19 +47,19 @@
                         <span class="total-duration">00:00</span>
                     </div>
                     <div class="audio-controls">
+                        <div class="speed-controller" style="margin-left: 5px">
+                            <select id="speed">
+                                <option value="1" style="visibility: hidden;">1x</option>
+                                <option value="0.25">.25x</option>
+                                <option value="0.5">.5x</option>
+                                <option value="0.75">.75x</option>
+                                <option class="active" value="1">1x</option>
+                                <option value="1.25">1.25x</option>
+                                <option value="1.75">1.75x</option>
+                                <option value="2">2x</option>
+                            </select>
+                        </div>
                         <div class="btn-wrapper">
-                            <div class="speed-controller">
-                                <select id="speed">
-                                    <option value="1" style="visibility: hidden;">1x</option>
-                                    <option value="0.25">.25x</option>
-                                    <option value="0.5">.5x</option>
-                                    <option value="0.75">.75x</option>
-                                    <option class="active" value="1">1x</option>
-                                    <option value="1.25">1.25x</option>
-                                    <option value="1.75">1.75x</option>
-                                    <option value="2">2x</option>
-                                </select>
-                            </div>
                             <span class="control-btn previous-btn" title="Previous">
                                 <img src="src/img/previous-btn.svg" class="svg-btn">
                             </span>
@@ -69,13 +69,13 @@
                             <span class="control-btn next-btn">
                                 <img src="src/img/next-btn.svg" class="svg-btn" title="Next">
                             </span>
-                            <span class="control-btn volume-btn" title="Volume" data-muted="false">
-                                <img src="src/img/volume-full-btn.svg" class="svg-btn">
-                                <div class="volume-bar-box volume-hidden">
-                                    <input type="range" style="width: 50px;" value="1" id="#volumeBar" min="0" max="1" step=".1">
-                                </div>
-                            </span>
                         </div>
+                        <span class="control-btn volume-btn" style="margin-right: 5px" title="Volume" data-muted="false">
+                            <img src="src/img/volume-full-btn.svg" class="svg-btn">
+                            <div class="volume-bar-box volume-hidden">
+                                <input type="range" style="width: 50px;" value="1" id="#volumeBar" min="0" max="1" step=".1">
+                            </div>
+                        </span>
                     </div>
                 </div>
             </div>
