@@ -88,7 +88,7 @@ main{
     width: 50vw;
     max-width: 300px;
     border-radius: 10px;
-    height: 400px;
+    height: 396px;
     background-color: var(--app-background);
     position: relative;
 }
@@ -146,24 +146,23 @@ main{
 }
 
 .audio-controls{
-    /* border: 1px solid; */
     width: 100%;
     padding: 5px 0px;
-    margin-top: 0px;
-    overflow: visible;
+    margin-bottom: 0px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
   /* playback speed  */
 .speed-controller{
     position: relative;
     width: auto;
-    margin-right: 5px;
+    margin-left: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
-    float: left;
+    float: right;
 }
  
 #speed{
@@ -181,7 +180,7 @@ main{
 .btn-wrapper{
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 50%;
 }
 
 /* control buttons and svgs */
@@ -212,14 +211,13 @@ main{
     height: 30px;
     width: 30px;
     margin-top: 3px;
-    margin-left: 5px;
+    margin-right: 2px;
     outline: none;
     background-color: rgb(42, 38, 38);
     box-shadow: none;
     padding: 5px;
     position: relative;
-    isolation: isolate;
-    float: right;
+    float: left;
 }
 .volume-btn .svg-btn{
     width: 20px;
@@ -227,17 +225,17 @@ main{
 }
 .volume-bar-box{
     position: absolute;
-    top: 0;
-    z-index: -1;
     border-radius: 100vmax;
     display: block;
     width: 40px;
     transition: transform .3s, opacity .3s;
     opacity: 0;
+    transform: scale(0);
 }
 .volume-btn:hover .volume-bar-box{
-    transform: translateX(28px);
+    transform: rotateZ(-90deg) translateY(-28px) translateX(-5px) scale(1);
     opacity: 1;
+    
 }
  /* Range styling  */
 #volumeBar{
