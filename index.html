@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Lite</title>
+    <title>Sasta Player Lite</title>
     <link rel="stylesheet" href="sasta-css.css">
     <script src="src/audio/tracks-info.js" defer></script>
     <script src="sasta-ui.js" defer></script>
     <script src="sasta-app.js" defer></script>
+    <script src="functions.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
             <div class="title">
-                <h1>Spotify</h1>
+                <h1>Sasta Player</h1>
             </div>
             <div class="playlist-box">
                 <button id="playlistBtn">
@@ -36,7 +37,7 @@
             <div class="controls">
                 <div class="track-info">
                     <h2 class="track-title">
-                        <marquee scrollamount="4">Track Title</marquee>
+                        <marquee scrollamount="4" class="marquee">Track Title</marquee>
                     </h2>
                     <h3 class="artist">Artist name</h3>
                 </div>

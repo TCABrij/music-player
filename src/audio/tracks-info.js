@@ -31,8 +31,8 @@ const tracks = [
         id: 5,
         name: 'Alan Walker - The Spectre',
         artist: 'Alan Walker',
-        thumbnail: '../img/track-thumbs/alanwalker.webp',
-        src: '5.m4a'
+        thumbnail: 'src/img/track-thumbs/alanwalker.webp',
+        src: 'src/audio/5.m4a'
     },
     {
         id: 6,

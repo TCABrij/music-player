@@ -11,19 +11,16 @@ const volumeSVG = volumeBtn.firstElementChild
 const volumeBar = document.querySelector('.volume-bar-box')
 const slider = volumeBar.firstElementChild
 
-// Listening If user clicks on Volume button
+// Mute Function
 volumeBtn.addEventListener('click', (e)=>{
     if(e.target.classList.contains('volume-btn') || e.target.classList.contains('svg-btn')){
-        if(volumeBtn.dataset.muted == 'false'){
-            volumeSVG.src = 'src/img/volume-muted-btn.svg'
-            volumeBtn.dataset.muted = 'true'
-            audio.volume = 0
+        if(audio.muted){
+            volumeSVG.src = 'src/img/volume-full-btn.svg'
+            audio.muted = false
         }
         else{
-            volumeSVG.src = 'src/img/volume-full-btn.svg'
-            volumeBtn.dataset.muted = 'false'
-            audio.volume = '1'
-            slider.value = 1
+            volumeSVG.src = 'src/img/volume-muted-btn.svg'
+            audio.muted = true
         }
     }
 })
@@ -76,13 +73,13 @@ playBtn.addEventListener('click', ()=>{
 
             function getTotalDuration(){
                 let duration = audio.duration
-                let min = Math.floor(duration/60) | 00
-                let seconds = Math.floor(duration - min*60) | 00
+                let min = Math.floor(duration/60) | 0
+                let seconds = Math.floor(duration - min*60) | 0
 
                 return `0${min}:${seconds}`
             }
 
-        },10)
+        },1000)
     }
     else{
         svgImg.src = 'src/img/play-btn.svg'

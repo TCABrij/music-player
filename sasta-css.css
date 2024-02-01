@@ -127,6 +127,11 @@ main{
 
 .artist{
     color: grey;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 18ch;
+    margin-inline: auto;
 }
 
  /* progress bar  */
